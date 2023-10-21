@@ -1,6 +1,9 @@
+"use strict";
+
 import generateJoke from "./generateJoke";
-import '../src/styles/main.scss'
-import laughing from "./assets/rony.png";
+import "../css/style.css";
+import '../css/main.scss'
+import laughing from "../images/rony.png";
 
 const laughImg = document.getElementById("laughImg");
 laughImg.src = laughing;
