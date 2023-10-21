@@ -1,5 +1,5 @@
 "use strict";
-
+import "../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
 import generateJoke from "./generateJoke";
 import "../css/style.css";
 import '../css/main.scss'
