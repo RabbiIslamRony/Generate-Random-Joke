@@ -7,7 +7,7 @@ const INCLUDE_PATTERN = /<include src="(.+)"\s*\/?>(?:<\/include>)?/gi
 const processNestedHtml = (content, loaderContext, dir = null) =>
   !INCLUDE_PATTERN.test(content)
     ? content
-    : content.replace(INCLUDE_PATTERN, (m, src) => {
+    : content.replace(INCLUDE_PATTERN, (src) => {
         const filePath = path.resolve(dir || loaderContext.context, src)
         loaderContext.addDependency(filePath)
         return processNestedHtml(
